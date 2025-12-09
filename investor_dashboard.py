@@ -3,12 +3,13 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 
-from core.shared import (
+from shared import (
     LANG_OPTIONS,
     labels,
     load_drivers_from_db,
     load_trips_from_db,
 )
+
 
 st.set_page_config(
     page_title="Mali Ride – Investor Demo Dashboard",
