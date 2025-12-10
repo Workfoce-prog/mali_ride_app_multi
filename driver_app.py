@@ -3,6 +3,10 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 
+import streamlit as st
+import pandas as pd
+from datetime import datetime
+
 from shared import (
     LANG_OPTIONS,
     labels,
@@ -18,11 +22,17 @@ from shared import (
     MALI_CITIES,
 )
 
-
 st.set_page_config(page_title="Mali Ride – Driver App", layout="wide")
 
 st.sidebar.markdown("### 🌍 Language / Langue / Kan")
 lang = st.sidebar.selectbox("", LANG_OPTIONS, index=0)
+
+def L(key):
+    return labels.get(lang, labels.get("English", {})).get(key, key)
+
+st.title("🚖 Mali Ride – Driver Demo")
+st.caption("Register drivers and view their earnings, penalties, and ratings based on recent trips.")
+
 
 def L(key):
     return labels.get(lang, labels["English"]).get(key, key)
