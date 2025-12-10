@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 
-from core.shared import (
+from shared import (
     LANG_OPTIONS,
     labels,
     load_drivers_from_db,
@@ -17,6 +17,7 @@ from core.shared import (
     _write_json,
     MALI_CITIES,
 )
+
 
 st.set_page_config(page_title="Mali Ride – Driver App", layout="wide")
 
