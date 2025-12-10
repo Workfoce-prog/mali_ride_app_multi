@@ -2,10 +2,11 @@
 import streamlit as st
 import pandas as pd
 
-from core.shared import (
+from shared import (
     load_drivers_from_db,
     load_trips_from_db,
 )
+
 
 st.set_page_config(page_title="Mali Ride – Investor Overview", layout="wide")
 
