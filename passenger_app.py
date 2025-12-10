@@ -26,7 +26,9 @@ st.sidebar.markdown("### 🌍 Language / Langue / Kan")
 lang = st.sidebar.selectbox("", LANG_OPTIONS, index=0)
 
 def L(key):
-    return labels.get(lang, labels["English" "French"]).get(key, key)
+    # Fallback to English labels if the selected language is missing
+    return labels.get(lang, labels.get("English", {})).get(key, key)
+
 
 st.title("🚕 Mali Ride – Passenger Demo")
 st.caption("Request a ride, apply promos, and manage scheduled trips for the investor demo.")
